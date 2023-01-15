@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#250e63, #2d0f6d, #461bba);
+}
+
+.main-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: rgba(0,0,0,0.2);
+} 
+
+.nav {
+  display: block; 
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
+.link:hover {
+  border: 1px solid #db1e1e;
+  color: #db1e1e;
+}
+
+
+
+/*about*/
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    background-color: transparent;
+}
+
+.main-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: rgba(73, 75, 80,0.3);
+    max-width: 1320px;
+    max-height: 674px;
+    padding: 3rem;
+}
+
+img {
+    margin-bottom: 6rem;
+    height: 445px;
+    width: 354px;
+    border-radius: 17px;
+}
+
+.support {
+    padding-top: 6rem;
+    margin-left: -3.7rem;
+}
+
+
+.personal-info{
+    background-color: #db1e1e;
+    display: flex;
+    justify-content: center;
+    min-width: 47%;
+    border-radius: 1rem;
+}
+
+.details{
+    padding: 36px 5px 35px;
+    list-style-type: none;
+    color: white;
+}
+
+.tittle-info{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 2px;
+    padding-bottom: 6px;
+}
+
+.info{
+    padding: 1rem;
+    font-size: 16px;
+}
+
+.description {
+    width: 45%;
+    padding-left: 75px;
+    top: -8px;
+}
+
+h4{
+    color: #db1e1e;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+h1{
+    padding-top: 1rem;
+    color: white;
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+}
+
+.sub-title{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #D3D7DF;
+}
+
+.text {
+    padding-top: 2rem;
+    font-size: 17px;
+    color: #A7AFBD;
+    line-height: 1.8;
+}
+
+.CV .btn{
+    font-size: 15px;
+    color: white;
+    font-weight: bolder;
+    margin-top: 2.4rem;
+    background-color: #db1e1e;
+    padding: 16px 50px;
+    border: 1px solid #db1e1e;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #341383;
+    color: #db1e1e;
+}
+
+/* Skils */
+
+#skills {
+    margin-top: 8%;
+}
+
+.skills-tittle {
+    text-align: center;
+    font-size: 36;
+}
+
+.skillbar-wrapper {
+    display: flex;
+    flex-direction: column;
+    columns: 2 2;
+    margin: 1.5em auto;
+    max-width: 960px;
+}
+
+.skillbar {
+    position:relative;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px; 
+}
+
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin: 0;
+}
+
+.skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height:35px;
+    line-height: 35px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+    height: 35px;
+    width: 0%;
+    border-radius: 3px;
+    transition: 500ms linear;
+    transition-property: width, background-color;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: rgba( 0, 0, 0, 0.4 );
+    transition: color 500ms ease-out;
+}
+
+.complete .skill-bar-percent {
+    color: #000;
+    font-size: 16px;
+}
+
+
+.html5 .skillbar-title {
+    background: #d35400;  
+}
+
+.html5 .skillbar-bar {
+    background: #e67e22;  
+}
+
+
+.css .skillbar-title {
+    background: #2980b9;  
+}
+
+.css .skillbar-bar {
+    background: #3498db;  
+}
+
+.javascript .skillbar-title {
+    background: #fac552;
+}
+.javascript .skillbar-bar {
+    background: #f1ac18;
+}
+
+.react .skillbar-title {
+    background: #2c3e50;  
+}
+
+.react .skillbar-bar {
+    background: #2c3e50;  
+}
+
+.mysql .skillbar-title {
+    background: #46465e;  
+}
+
+.mysql .skillbar-bar {
+    background: #5a68a5;  
+}
+
+/* Projects */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 8%;
+}
+
+
+.poke-api {
+    display: flex;
+    background-color: rgba(73, 75, 80,0.3);
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.text-cont {
+    color: white;
+    width: 50%;
+}
+
+.images {
+    height: 60px;
+}
+
+.images > .icon {
+    width: 32px;
+    height: 32px;
+}
+
+.img-container {
+    width: 300px;
+    height: 240px;
+}
+
+.pokedex-cap {
+    width: 300px;
+    height: 240px;
+}
+
+.link-project {
+    padding: 10px;
+    border: 2px solid #db1e1e;
+    text-decoration: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #db1e1e;
+}
+
+.link-project:hover {
+    background-color: #341383;
+}
+
+
+/* Form */
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 8%;
+    margin-bottom: 4%;
+}
+
+.contact-tittle {
+    font-size: 36px;
+}
+
+form {
+    width: 30%;
+    padding: 18px;
+    background-color: rgba(73, 75, 80,0.3);
+    border-radius: 12px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+}
+
+div > input {
+   height: 40px;
+   border-radius: 8px;
+}
+
+div > label {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+div > #message {
+    height: 30%;
+    border-radius: 8px;
+}
+
+.send-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#send-button {
+    background-color: #db1e1e;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 40%;
+    color: white;
+}
+
+/* footer */
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.text-footer {
+    padding: 6px;
+}
