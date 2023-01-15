@@ -168,10 +168,17 @@ h1{
 
 .skillbar-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     columns: 2 2;
     margin: 1.5em auto;
-    max-width: 960px;
+    width: 80%;
+}
+
+.skills-column {
+    width: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .skillbar {

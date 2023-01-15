@@ -62,9 +62,6 @@ const message = document.getElementById("message");
 
 
 
-
-
-
 const validateForm = () => {
   form.addEventListener('submit', function(event) {
     event.preventDefault();
