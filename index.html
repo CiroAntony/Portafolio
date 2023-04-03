@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="styles.css" type="text/css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,11 +18,11 @@
     </nav>
   </header>
 
-  <section id='about'>
+  <section id='about' data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
     <div class='main-about'>
       <div class='container'>
         <div class='profile'>
-          <img src="images/profile.jpg" alt="mi perfil" />
+          <img src="images/me.jpg" alt="mi perfil" />
         </div>
       </div>
       <div class="support">
@@ -109,7 +110,7 @@
 
   <section id="projects">
     <h1 class="tittle-project">Projects</h1>
-    <div class="poke-api">
+    <div class="poke-api" data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
       <div class="text-cont">
         <h3 class="tittle">Poke-Api</h3>
         <p class="comment">Here you can see the pokemons and some of their data extracted from an API.</p>
@@ -129,30 +130,32 @@
       </div>
     </div>
 
-    <div class="poke-api">
+    <div class="poke-api" data-aos="fade-left" data-aos-easing="inline" data-aos-duration="1500">
       <div class="text-cont">
-        <h3 class="tittle">Poke-Api</h3>
-        <p class="comment">Here you can see the pokemons and some of their data extracted from an API.</p>
+        <h3 class="tittle">Task Manager</h3>
+        <p class="comment">Organize your life with our task manager. Create lists, set priorities, and never forget an
+          important task again. Download now and simplify your day-to-day!</p>
 
         <div class="images">
           <img src="images/html.png" alt="html" class="icon">
           <img src="images/css-3.png" alt="css-3" class="icon">
           <img src="images/java-script.png" alt="javascript" class="icon">
-          <img src="images/api.png" alt="API" class="icon">
         </div>
 
-        <a class="link-project" href="https://superb-cheesecake-75e761.netlify.app/#">View project</a>
+        <a class="link-project" href="https://task-manager-alpha-murex.vercel.app/">View project</a>
       </div>
 
       <div class="img-container">
-        <img src="images/pokedex.png" alt="pokedex" class="pokedex-cap">
+        <img src="images/task.png" alt="pokedex" class="pokedex-cap">
       </div>
     </div>
 
-    <div class="poke-api">
+    <div class="poke-api" data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
       <div class="text-cont">
-        <h3 class="tittle">Poke-Api</h3>
-        <p class="comment">Here you can see the pokemons and some of their data extracted from an API.</p>
+        <h3 class="tittle">Rick&Morty-Api</h3>
+        <p class="comment">Explore the universe of Rick and Morty with our website. Using the show's API, we list the
+          characters on interactive cards that you can filter using our search tool. Find your favorite characters in
+          seconds! Start exploring now!.</p>
 
         <div class="images">
           <img src="images/html.png" alt="html" class="icon">
@@ -161,11 +164,11 @@
           <img src="images/api.png" alt="API" class="icon">
         </div>
 
-        <a class="link-project" href="https://superb-cheesecake-75e761.netlify.app/#">View project</a>
+        <a class="link-project" href="https://api-rick-morty-nu.vercel.app/">View project</a>
       </div>
 
       <div class="img-container">
-        <img src="images/pokedex.png" alt="pokedex" class="pokedex-cap">
+        <img src="images/rick.png" alt="pokedex" class="pokedex-cap">
       </div>
     </div>
 
@@ -204,6 +207,10 @@
 
   <script type="text/javascript">
     emailjs.init('78mFX6kB5wZSa8pQF')
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 </body>
 
