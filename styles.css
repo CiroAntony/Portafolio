@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(#250e63, #2d0f6d, #461bba);
+    background-image: linear-gradient(to bottom, #000000, #171516, #252325, #333136, #414148, #54555c, #686970, #7c7e85, #9c9da2, #bcbcc0, #dddddf, #ffffff);
 }
 
 .main-header{
@@ -17,7 +17,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #260E65;
+  background-color: rgba(0,0,0,0.7);
   z-index: 999;
 }
 
@@ -27,17 +27,20 @@ body {
 
 /*SVG*/
 @keyframes changeFill {
-    10% {
-        fill: #000000;
-    }
-
-    55% {
+    0% {
         fill: #ffffff;
     }
-
-    100% {
-         fill: #ff0000;
+    49% {
+        fill: #ff0000;
     }
+
+    50% {
+        fill: #ffffff;
+    }
+    100% {
+        fill: #ff0000;
+    }
+
 }
 
 text.sketch {
@@ -193,20 +196,19 @@ h1{
 }
 
 .CV .btn{
-    font-size: 15px;
-    color: white;
+    font-size: 17px;
+    color: #ffffff;
     font-weight: bolder;
     margin-top: 2.4rem;
-    background-color: #db1e1e;
+    background-color: #ff0000;
     padding: 16px 50px;
-    border: 1px solid #db1e1e;
     border-radius: 1rem;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #341383;
-    color: #db1e1e;
+    background-color: #ffffff;
+    color: #ff0000;
 }
 
 /* Skils */
