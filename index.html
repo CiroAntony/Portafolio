@@ -10,10 +10,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="styles.css" type="text/css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css"
+    integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+  <!-- GSap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
   <header class="main-header">
+    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="70" viewBox="0 0 50 20">
+
+      <a href="index.html" class="logo">
+        <text x="25" y="13" font-size="13" fill="#000000" text-anchor="middle" alignment-baseline="middle"
+          class="sketch" style="animation: changeFill 8s linear infinite;">
+          &lt;/<tspan baseline-shift="-25%" font-size="12">VM</tspan>&gt;
+        </text>
+
+      </a>
+    </svg>
+
     <nav class="nav">
       <a href="#skills" class="link">Skills</a>
       <a href="#projects" class="link">Projects</a>
@@ -24,88 +41,112 @@
   <section id='about' data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
     <div class='main-about'>
       <div class='container'>
-        <div class='profile'>
-          <img src="images/me.jpg" alt="mi perfil" />
+        <div class="profile-datails">
+          <div class='profile'>
+            <img src="images/me.jpg" alt="mi perfil" class="img-profile" />
+          </div>
+          <div class="support">
+            <div class="personal-info">
+              <ul class='details'>
+                <li class='info'>
+                  <h3 class="tittle-info">Name:</h3>
+                  <span class="per-info">Ciro Vásquez</span>
+                </li>
+                <li class='info'>
+                  <h3 class="tittle-info">Occupation:</h3>
+                  <span class="per-info">Web Programmer</span>
+                </li>
+                <li class='info'>
+                  <h3 class="tittle-info">E-mail:</h3>
+                  <span class="per-info">vasquezciro654@gmail.com</span>
+                </li>
+                <li class='info'>
+                  <h3 class="tittle-info">Phone:</h3>
+                  <span class="per-info">+51 935362834</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="support">
-        <div class="personal-info">
-          <ul class='details'>
-            <li class='info'>
-              <h3 class="tittle-info">Name:</h3>
-              <span>Ciro Vásquez</span>
-            </li>
-            <li class='info'>
-              <h3 class="tittle-info">Occupation:</h3>
-              <span>Web Programmer</span>
-            </li>
-            <li class='info'>
-              <h3 class="tittle-info">E-mail:</h3>
-              <span>vasquezciro654@gmail.com</span>
-            </li>
-            <li class='info'>
-              <h3 class="tittle-info">Phone:</h3>
-              <span>+51 935362834</span>
-            </li>
-          </ul>
+
+        <div class='description'>
+          <div>
+            <h4>About Me</h4>
+          </div>
+          <div class='me'>
+            <h1>Front-end developer web</h1>
+            <span class='sub-title'>
+              I am a beginner web developer, technology lover and self-taught programmer.
+            </span>
+            <p class='text'>
+              Hi! My name is Ciro Vasquez. I am a web developer and I'm very passionate and dedicated to my profession.
+              Although I have no work experience, I have acquired the necessary skills and knowledge to make your
+              project
+              a success.
+            </p>
+          </div>
+          <a class='CV' href='documents/Vasquez-CV.pdf' download='Vasquez Vasquez-CV.pdf'>
+            <button class='btn'>DOWNLOAD CV</button>
+          </a>
         </div>
-      </div>
-      <div class='description'>
-        <div>
-          <h4>About Me</h4>
-        </div>
-        <div class='me'>
-          <h1>Front-end developer web</h1>
-          <span class='sub-title'>
-            I am a beginner web developer, technology lover and self-taught programmer.
-          </span>
-          <p class='text'>
-            Hi! My name is Ciro Vasquez. I am a web developer and I'm very passionate and dedicated to my profession.
-            Although I have no work experience, I have acquired the necessary skills and knowledge to make your project
-            a success.
-          </p>
-        </div>
-        <a class='CV' href='documents/Vasquez-CV.pdf' download='Vasquez Vasquez-CV.pdf'>
-          <button class='btn'>DOWNLOAD CV</button>
-        </a>
       </div>
     </div>
+
   </section>
 
   <section id="skills">
     <h1 class="skills-tittle">Skills</h1>
-    <div class="skillbar-wrapper">
-      <div class="skills-column">
-        <div class="skillbar clearfix html5" data-percent="100%">
-          <h4 class="skillbar-title"><span>HTML5</span></h4>
-          <div class="skillbar-bar"></div>
-          <div class="skill-bar-percent">100%</div>
+    <div class="skill-main-container">
+      <div class="skill-container">
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/html5.png" alt="HTML5" class="skill-img">
+          </div>
+          <h3 class="skill-name">HTML5</h3>
         </div>
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/css.png" alt="css3" class="skill-img">
+          </div>
 
-        <div class="skillbar clearfix css" data-percent="60%">
-          <h4 class="skillbar-title"><span>CSS</span></h4>
-          <div class="skillbar-bar"></div>
-          <div class="skill-bar-percent">60%</div>
+          <h3 class="skill-name">CSS</h3>
         </div>
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/js.png" alt="javascript" class="skill-img">
+          </div>
 
-        <div class="skillbar clearfix javascript" data-percent="50%">
-          <h4 class="skillbar-title"><span>JavaScript</span></h4>
-          <div class="skillbar-bar"></div>
-          <div class="skill-bar-percent">50%</div>
+          <h3 class="skill-name">JS</h3>
         </div>
-      </div>
-
-      <div class="skills-column">
-        <div class="skillbar clearfix react" data-percent="36%">
-          <h4 class="skillbar-title"><span>React</span></h4>
-          <div class="skillbar-bar"></div>
-          <div class="skill-bar-percent">36%</div>
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/react.png" alt="React.js" class="skill-img">
+          </div>
+          <h3 class="skill-name">ReactJS</h3>
         </div>
-
-        <div class="skillbar clearfix mysql" data-percent="30%">
-          <h4 class="skillbar-title"><span>MySql</span></h4>
-          <div class="skillbar-bar"></div>
-          <div class="skill-bar-percent">30%</div>
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/bootstrap.png" alt="bootstrap" class="skill-img">
+          </div>
+          <h3 class="skill-name">Bootstrap</h3>
+        </div>
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/mysql.png" alt="MySql" class="skill-img">
+          </div>
+          <h3 class="skill-name">MySql</h3>
+        </div>
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/github.png" alt="Github" class="skill-img">
+          </div>
+          <h3 class="skill-name">Github</h3>
+        </div>
+        <div class="data-skill-container">
+          <div class="image">
+            <img src="images/git.png" alt="Git" class="skill-img">
+          </div>
+          <h3 class="skill-name">Git</h3>
         </div>
       </div>
     </div>
@@ -196,27 +237,20 @@
         <textarea id="message" name="message" rows="6" placeholder="Leave a comment..."></textarea>
       </div>
       <div class="send-container">
-        <input id="send-button" type="submit" value="Send Email">
+        <button class="send-button">Send Email</button>
       </div>
     </form>
   </div>
 
   <footer class="footer">
-    <p class="text-footer">Made by Ciro Vasquez - 2022</p>
+    <p class="text-footer">Made by Ciro Vasquez - 2023</p>
   </footer>
-
   <script src="main.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-  <script type="text/javascript">
-    emailjs.init('78mFX6kB5wZSa8pQF')
-  </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+  <!-- <script> -->
+  <!--   AOS.init(); -->
+  <!-- </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </body>
-
-</html>
 
 </html>

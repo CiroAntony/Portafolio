@@ -1,96 +1,46 @@
-const form = document.getElementById('form');
-const btn = document.getElementById('send-button');
-const email = document.getElementById("email_id");
-const subject = document.getElementById("subject");
-const message = document.getElementById("message");
+const header = document.querySelector('.main-header');
 
-(function() {
-
-  var SkillsBar = function(bars) {
-    this.bars = document.querySelectorAll(bars);
-    if (this.bars.length > 0) {
-      this.init();
-    }
-  };
-
-  SkillsBar.prototype = {
-    init: function() {
-      var self = this;
-      self.index = -1;
-      self.timer = setTimeout(function() {
-        self.action();
-      }, 500);
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 100) {
+    header.classList.add('fixed-header');
+  } else {
+    header.classList.remove('fixed-header');
+  }
+});
 
 
+batch(".main-about, .tittle-project, .poke-api, .skills-tittle, .data-skill-container, #form-container, .contact-tittle", {
+  interval: 0.1,
+  onEnter: batch => gsap.to(batch, { autoAlpha: 1, stagger: 0.15, overwrite: true }),
+  onLeave: batch => gsap.set(batch, { autoAlpha: 0, overwrite: true }),
+  onEnterBack: batch => gsap.to(batch, { autoAlpha: 1, stagger: 0.15, overwrite: true }),
+  onLeaveBack: batch => gsap.set(batch, { autoAlpha: 0, overwrite: true })
+});
+
+
+
+function batch(targets, vars) {
+  let varsCopy = {},
+    interval = vars.interval || 0.1,
+    proxyCallback = (type, callback) => {
+      let batch = [],
+        delay = gsap.delayedCall(interval, () => { callback(batch); batch.length = 0; }).pause();
+      return self => {
+        batch.length || delay.restart(true);
+        batch.push(self.trigger);
+        vars.batchMax && vars.batchMax <= batch.length && delay.progress(1);
+      };
     },
-    select: function(n) {
-      var self = this,
-        bar = self.bars[n];
-
-      if (bar) {
-        var width = bar.parentNode.dataset.percent;
-
-        bar.style.width = width;
-        bar.parentNode.classList.add("complete");
-      }
-    },
-    action: function() {
-      var self = this;
-      self.index++;
-      if (self.index == self.bars.length) {
-        clearTimeout(self.timer);
-      } else {
-        self.select(self.index);
-      }
-
-      setTimeout(function() {
-        self.action();
-      }, 500);
+    p;
+  for (p in vars) {
+    varsCopy[p] = (~p.indexOf("Enter") || ~p.indexOf("Leave")) ? proxyCallback(p, vars[p]) : vars[p];
+  }
+  gsap.utils.toArray(targets).forEach(target => {
+    let config = {};
+    for (p in varsCopy) {
+      config[p] = varsCopy[p];
     }
-  };
-
-  window.SkillsBar = SkillsBar;
-
-})();
-
-(function() {
-  document.addEventListener("DOMContentLoaded", function() {
-    var skills = new SkillsBar(".skillbar-bar");
-  });
-})();
-
-
-
-
-const validateForm = () => {
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    if (email.value === "" || subject.value === "" || message.value === "") {
-      alert("Por favor llene todos los campos");
-      return;
-    }
-
-    btn.value = 'Sending...';
-
-    const serviceID = 'default_service';
-    const templateID = 'template_2ceopz8';
-
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
-        email.value = "";
-        subject.value = "";
-        message.value = "";
-      }, (err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
-      });
+    config.trigger = target;
+    ScrollTrigger.create(config);
   });
 }
-
-validateForm();
-
-
-
