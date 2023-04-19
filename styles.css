@@ -8,7 +8,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, #000000, #171516, #252325, #333136, #414148, #54555c, #686970, #7c7e85, #9c9da2, #bcbcc0, #dddddf, #ffffff);
+    background-image: linear-gradient(to bottom, #000000, #171516, #252325, #333136, #414148);
 }
 
 .main-header{
@@ -59,13 +59,14 @@ text.sketch {
 
 
 .nav {
-    width: 15%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .link {
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 22px;
     color: #fff;
     text-decoration: none;
@@ -85,6 +86,10 @@ text.sketch {
 }
 .link:hover {
     color: #ff0000;
+}
+
+#menu-button {
+    display: none;
 }
 
 
@@ -113,16 +118,10 @@ text.sketch {
 .container {
     display: flex;
     justify-content: space-around;
-    width: 30%;
 }
 
 .profile-datails {
     display: flex;
-}
-
-.profile {
-    height: 445px;
-    width: 354px;
 }
 
 .img-profile {
@@ -237,15 +236,15 @@ h1{
 
 .skill-container {
     display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 960px;
-  width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 960px;
+    width: 100%;
 }
 
 .data-skill-container {
     width: 23%;
-  margin-bottom: 20px;
+    margin-bottom: 20px;
     text-align: center;
     color: white;
     opacity: 0;
@@ -274,19 +273,19 @@ h1{
 .poke-api {
     display: flex;
     background-color: rgba(73, 75, 80,0.3);
-    width: 50%;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     border-radius: 12px;
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     margin-bottom: 20px;
     opacity: 0;
+    
 }
 
 .text-cont {
     color: white;
-    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    
 }
 
 .images {
@@ -301,28 +300,32 @@ h1{
 .img-container {
     width: 300px;
     height: 240px;
+    margin-right: 10px;;
 }
 
 .pokedex-cap {
+    border-radius: 18px;
     width: 300px;
-    height: 240px;
+    height: 220px;
+    
 }
 
 .link-project {
     padding: 10px;
-    border: 2px solid #db1e1e;
     text-decoration: none;
     border-radius: 6px;
     color: white;
     background-color: #db1e1e;
+    font-size: 18px;
 }
 
 .link-project:hover {
-    background-color: #341383;
+    background-color: #ffffff;
+    color: #ff0000;
 }
 
 .comment {
-    width: 400px;
+    max-width: 500px;
 }
 
 
@@ -332,7 +335,6 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     margin-top: 4%;
     margin-bottom: 4%;
     opacity: 0;
@@ -343,9 +345,9 @@ h1{
 }
 
 form {
-    width: 30%;
+    min-width: 30%;
     padding: 18px;
-    background-color: rgba(73, 75, 80,0.3);
+    background-color: rgba(73, 75, 80,0.7);
     border-radius: 12px;
 }
 
@@ -357,8 +359,9 @@ form > div {
 
 div > input {
     outline-color: #ff0000;
-   height: 40px;
-   border-radius: 8px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
 }
 
 div > label {
@@ -388,6 +391,7 @@ div > #message {
     padding: 10px 0 10px 0;
     width: 40%;
     color: white;
+    border: none;
 }
 
 .send-button:hover {
@@ -405,5 +409,347 @@ div > #message {
 }
 
 .text-footer {
-    padding: 6px;
+    padding-top: 16px;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+/* Responsive */
+/* Estilos para pantaldlas medianas */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .main-about {
+        width: 920px;
+        max-height: 650px;
+        padding:1rem;
+    }
+
+    .img-profile {
+        height: 370px;
+        width: 280px;
+    }
+
+    .support {
+        margin-left: -3rem;
+    }
+
+    .description {
+        width: 350px;
+        margin-left: 10px;;
+    }
+
+    form {
+        width: 45%;
+    }
+
+    .CV .btn {
+        margin-top: .6rem;
+    }
+
+    h1 {
+        padding-bottom: 3px;
+        padding-top: 4px;
+        font-size: 24px;
+    }
+
+    .text {
+        padding-top: 6px;
+    }
+
+    .skill-container {
+        max-width: 700px;
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-datails {
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .img-profile {
+        border-radius: 50%;
+        height: 270px;
+        width: 250px;
+        margin: 0; 
+    }
+
+    .support {
+        display: none;
+    }
+
+    .description {
+        width: 90%;
+    }
+
+    .cv-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .CV .btn {
+        margin-top: 0;
+    }
+    
+    .text {
+        padding-top: 6px;
+        margin: 0;
+        font-size: 19px;
+    }
+
+    h1 {
+        padding: 4px;
+    }
+
+    form {
+        width: 45%;
+    }
+
+    .main-projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 960px;
+        width: 100%;
+    }
+
+    .poke-api {
+        flex-direction:column-reverse;
+        align-items: center;
+        width: 350px;
+        padding-bottom: 1.5rem;
+    }
+
+    .text-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos para pantallas de celulares */
+@media screen and (min-width: 639px) and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-datails {
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .img-profile {
+        border-radius: 50%;
+        height: 270px;
+        width: 250px;
+        margin: 0; 
+    }
+
+    .support {
+        display: none;
+    }
+
+    .description {
+        width: 90%;
+    }
+
+    .cv-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .CV .btn {
+        margin-top: 0;
+    }
+    
+    .text {
+        padding-top: 6px;
+        margin: 0;
+        font-size: 19px;
+    }
+
+    h1 {
+        padding: 4px;
+    }
+
+    form {
+        width: 70%;
+    }
+
+    .main-projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 960px;
+        width: 100%;
+    }
+
+    .poke-api {
+        flex-direction:column-reverse;
+        align-items: center;
+        width: 350px;
+        padding-bottom: 1.5rem;
+    }
+
+    .text-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 638px) {
+    #about {
+        margin-bottom: 3rem;
+    }
+
+    .main-about {
+        width: 380px;
+        height: 630px;
+        padding: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .profile-datails {
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .img-profile {
+        border-radius: 50%;
+        height: 180px;
+        width: 200px;
+        margin: 0; 
+    }
+
+    .support {
+        display: none;
+    }
+
+    .description {
+        width: 90%;
+    }
+
+    .cv-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .CV .btn {
+        font-size: 14px;
+        margin-top: 20px;
+        padding: 10px 20px;
+    }
+    
+    .text {
+        padding-top: 6px;
+        margin: 0;
+        font-size: 19px;
+    }
+
+    h1 {
+        font-size: 2px;
+        padding: 4px;
+    }
+
+    form {
+        width: 86%;
+    }
+
+    .main-projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 960px;
+        width: 100%;
+    }
+
+    .poke-api {
+        flex-direction:column-reverse;
+        align-items: center;
+        width: 350px;
+        padding-bottom: 1.5rem;
+    }
+
+    .text-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .skill-name {
+        font-size: 16px;
+    }
+
+    #menu-button {
+        display: block;
+        background: transparent;
+        border: none;
+    } 
+
+    #menu-button:hover {
+        color: red;
+    }
+
+    .main-header {
+        position: relative;
+    }
+
+    .nav {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        color: white;
+        left: 0;
+        background-color: rgba(73, 75, 80,0.7);
+    }
+
+    .nav.show {
+        display: block !important;
+        text-align: center;
+    }
+
+    .link {
+        display: block;
+        background-color: #000;
+        padding: 10px 0 10px 0;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .link:hover {
+        background-color: #ffffff;
+        color: #ff0000;
+    }
 }

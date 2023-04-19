@@ -8,6 +8,43 @@ window.addEventListener('scroll', function() {
   }
 });
 
+const toggleButton = document.getElementById('menu-button');
+const nav = document.querySelector('.nav');
+const navItems = document.querySelectorAll('.link');
+
+toggleButton.addEventListener('click', function() {
+  nav.classList.toggle('show');
+  console.log('click');
+});
+
+navItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    nav.classList.remove('show');
+  });
+});
+
+let isClicked = false;
+let originalColor = toggleButton.getAttribute("stroke");
+
+toggleButton.addEventListener("click", function() {
+  if (!isClicked) {
+    toggleButton.setAttribute("stroke", "red");
+    isClicked = true;
+  } else {
+    toggleButton.setAttribute("stroke", originalColor);
+    isClicked = false;
+  }
+});
+
+
+navItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    toggleButton.setAttribute('stroke', originalColor);
+    isClicked = false;
+    nav.classList.remove('show');
+  });
+});
+
 
 batch(".main-about, .tittle-project, .poke-api, .skills-tittle, .data-skill-container, #form-container, .contact-tittle", {
   interval: 0.1,
@@ -103,7 +140,7 @@ particlesJS("particles-js", {
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true, // Activar efecto de atracción
         "rotateX": 600,
         "rotateY": 1200
       }
@@ -113,7 +150,7 @@ particlesJS("particles-js", {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": true, // Activar efecto de repulsión al pasar el mouse
         "mode": "repulse"
       },
       "onclick": {
@@ -137,7 +174,8 @@ particlesJS("particles-js", {
         "speed": 3
       },
       "repulse": {
-        "distance": 200
+        "distance": 200,
+        "duration": 0.4
       },
       "push": {
         "particles_nb": 4

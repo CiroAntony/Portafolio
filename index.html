@@ -39,6 +39,10 @@
       <a href="#projects" class="link">Projects</a>
       <a href="#form-container" class="link">ContacMe</a>
     </nav>
+    <svg id="menu-button" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24"
+      strokeWidth={1.5} stroke="#FFFFFF" className="w-6 h-6">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
   </header>
 
   <section id='about' data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
@@ -88,9 +92,11 @@
               a success.
             </p>
           </div>
-          <a class='CV' href='documents/Vasquez-CV.pdf' download='Vasquez Vasquez-CV.pdf'>
-            <button class='btn'>DOWNLOAD CV</button>
-          </a>
+          <div class="cv-container">
+            <a class='CV' href='documents/Vasquez-CV.pdf' download='Vasquez Vasquez-CV.pdf'>
+              <button class='btn'>DOWNLOAD CV</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -157,68 +163,71 @@
 
   <section id="projects">
     <h1 class="tittle-project">Projects</h1>
-    <div class="poke-api" data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
-      <div class="text-cont">
-        <h3 class="tittle">Poke-Api</h3>
-        <p class="comment">Here you can see the pokemons and some of their data extracted from an API.</p>
+    <div class="main-projects-container">
+      <div class="poke-api" data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
+        <div class="text-cont">
+          <h3 class="tittle">Poke-Api</h3>
+          <p class="comment">Explore the universe of Pokemon with our website. Using the program's API, we list the
+            pokemons on cards that contain an image and some data of the pokemon, on this page there are absolutely all
+            the pokemons.</p>
 
-        <div class="images">
-          <img src="images/html.png" alt="html" class="icon">
-          <img src="images/css-3.png" alt="css-3" class="icon">
-          <img src="images/java-script.png" alt="javascript" class="icon">
-          <img src="images/api.png" alt="API" class="icon">
+          <div class="images">
+            <img src="images/html.png" alt="html" class="icon">
+            <img src="images/css-3.png" alt="css-3" class="icon">
+            <img src="images/java-script.png" alt="javascript" class="icon">
+            <img src="images/api.png" alt="API" class="icon">
+          </div>
+
+          <a class="link-project" href="https://superb-cheesecake-75e761.netlify.app/#">View project</a>
         </div>
 
-        <a class="link-project" href="https://superb-cheesecake-75e761.netlify.app/#">View project</a>
+        <div class="img-container">
+          <img src="images/pokedex.png" alt="pokedex" class="pokedex-cap">
+        </div>
       </div>
 
-      <div class="img-container">
-        <img src="images/pokedex.png" alt="pokedex" class="pokedex-cap">
-      </div>
-    </div>
+      <div class="poke-api" data-aos="fade-left" data-aos-easing="inline" data-aos-duration="1500">
+        <div class="text-cont">
+          <h3 class="tittle">Task Manager</h3>
+          <p class="comment">Organize your life with our task manager. Create lists, set priorities, and never forget an
+            important task again. Download now and simplify your day-to-day!</p>
 
-    <div class="poke-api" data-aos="fade-left" data-aos-easing="inline" data-aos-duration="1500">
-      <div class="text-cont">
-        <h3 class="tittle">Task Manager</h3>
-        <p class="comment">Organize your life with our task manager. Create lists, set priorities, and never forget an
-          important task again. Download now and simplify your day-to-day!</p>
+          <div class="images">
+            <img src="images/html.png" alt="html" class="icon">
+            <img src="images/css-3.png" alt="css-3" class="icon">
+            <img src="images/java-script.png" alt="javascript" class="icon">
+          </div>
 
-        <div class="images">
-          <img src="images/html.png" alt="html" class="icon">
-          <img src="images/css-3.png" alt="css-3" class="icon">
-          <img src="images/java-script.png" alt="javascript" class="icon">
+          <a class="link-project" href="https://task-manager-alpha-murex.vercel.app/">View project</a>
         </div>
 
-        <a class="link-project" href="https://task-manager-alpha-murex.vercel.app/">View project</a>
+        <div class="img-container">
+          <img src="images/task.png" alt="pokedex" class="pokedex-cap">
+        </div>
       </div>
 
-      <div class="img-container">
-        <img src="images/task.png" alt="pokedex" class="pokedex-cap">
-      </div>
-    </div>
+      <div class="poke-api" data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
+        <div class="text-cont">
+          <h3 class="tittle">Rick&Morty-Api</h3>
+          <p class="comment">Explore the universe of Rick and Morty with our website. Using the show's API, we list the
+            characters on interactive cards that you can filter using our search tool. Find your favorite characters in
+            seconds! Start exploring now!.</p>
 
-    <div class="poke-api" data-aos="fade-right" data-aos-easing="inline" data-aos-duration="1500">
-      <div class="text-cont">
-        <h3 class="tittle">Rick&Morty-Api</h3>
-        <p class="comment">Explore the universe of Rick and Morty with our website. Using the show's API, we list the
-          characters on interactive cards that you can filter using our search tool. Find your favorite characters in
-          seconds! Start exploring now!.</p>
+          <div class="images">
+            <img src="images/html.png" alt="html" class="icon">
+            <img src="images/css-3.png" alt="css-3" class="icon">
+            <img src="images/java-script.png" alt="javascript" class="icon">
+            <img src="images/api.png" alt="API" class="icon">
+          </div>
 
-        <div class="images">
-          <img src="images/html.png" alt="html" class="icon">
-          <img src="images/css-3.png" alt="css-3" class="icon">
-          <img src="images/java-script.png" alt="javascript" class="icon">
-          <img src="images/api.png" alt="API" class="icon">
+          <a class="link-project" href="https://api-rick-morty-nu.vercel.app/">View project</a>
         </div>
 
-        <a class="link-project" href="https://api-rick-morty-nu.vercel.app/">View project</a>
-      </div>
-
-      <div class="img-container">
-        <img src="images/rick.png" alt="pokedex" class="pokedex-cap">
+        <div class="img-container">
+          <img src="images/rick.png" alt="pokedex" class="pokedex-cap">
+        </div>
       </div>
     </div>
-
   </section>
 
   <div id="form-container">
@@ -246,7 +255,7 @@
   </div>
 
   <footer class="footer">
-    <p class="text-footer">Made by Ciro Vasquez - 2023</p>
+    <p class="text-footer">Made by: <b>Ciro Vasquez - 2023</b></p>
   </footer>
   <script src="main.js"></script>
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
